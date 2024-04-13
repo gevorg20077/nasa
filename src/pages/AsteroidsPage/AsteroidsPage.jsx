@@ -26,12 +26,12 @@ const AsteroidsPage = () => {
       <div className="asteroidsPage__date">
         <div className="asteroidsPage__start_date">
           <p>{changeLanguage.russian ? "Начальная Дата:" : changeLanguage.armenian ? "Սկզբնական Ամսաթիվ:" : "Start Date:"}</p>
-          <input type="text" value={calendarValue.day + "/" + calendarValue.month + "/" + calendarValue.year} onFocus={calendarStart} />
+          <input type="text" defaultValue={calendarValue.day + "/" + calendarValue.month + "/" + calendarValue.year} onFocus={calendarStart} />
           {isStart && <Calendar />}
         </div>
         <div className="asteroidsPage__end_date">
           <p>{changeLanguage.russian ? "Конечная Дата:" : changeLanguage.armenian ? "Վերջնական Ամսաթիվ:" : "End Date:"}</p>
-          <input type="text" value={calendarValue.day + "/" + calendarValue.month + "/" + calendarValue.year} onFocus={calendarEnd} />
+          <input type="text" defaultValue={calendarValue.day + "/" + calendarValue.month + "/" + calendarValue.year} onFocus={calendarEnd} />
           {isEnd && <Calendar />}
           <button>{changeLanguage.russian ? "Поиск" : changeLanguage.armenian ? "Փնտրել" : "Search"}</button>
         </div>

@@ -12,7 +12,7 @@ const PhotoPage = () => {
   const date = useSelector(state => state.date)
   const isCalendar = useSelector(state => state.isCalendar);
   const calendarValue = useSelector(state => state.calendarValue)
-  // console.log();
+  console.log();
   return (
     <form className="photoPage">
       <input type="text" value={calendarValue.day + "/" + calendarValue.month + "/" + calendarValue.year} onFocus={() => dispatch(openCalendar())} />
